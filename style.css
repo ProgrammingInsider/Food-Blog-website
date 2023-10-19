@@ -1,0 +1,300 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+
+main{
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+header .menu{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+header .menu img{
+    width: 100%;
+}
+
+header h1{
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    max-width: 50%;
+    background-color: white;
+    display: none;
+}
+
+
+nav ul li{
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1em;
+}
+
+nav ul li a{
+    color: black;
+}
+
+nav ul li:hover{
+    background-color: lightgray;
+}
+
+.gallery{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: apx solid lightgrey;
+    padding-bottom: 5em;
+}
+
+.gallery .img_gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:15px;
+}
+
+.gallery .img_gallery .card{
+    max-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gallery .img_gallery .card .image{
+    max-width: 100%;
+    max-height: 400px;
+}
+
+.gallery .img_gallery .card .image img{
+    width: 100%;
+    height: 100%;
+}
+
+.gallery .img_gallery .card .caption{
+  width: 100%;
+  height: 400px;
+  margin-top: 1.5em;
+}
+
+.gallery .img_gallery .card .caption h3{
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+
+.gallery .img_gallery .card .caption p{
+    text-align: center;
+    font-size: .9rem;
+    margin-top: 1em;
+}
+
+
+section.gallery .pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+
+.pagination ul{
+    display: flex;
+}
+
+.pagination ul li{
+    margin-right: 30px;
+    color: black;
+    font-weight: 300;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.pagination ul li.active{
+    background-color: black;
+    color: white;
+}
+
+.about{
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 5em;
+    border-bottom: 1px solid lightgray;
+}
+
+.about .title{
+    margin: 2em;
+    font-weight: lighter;
+}
+
+.about .about_banner{
+    max-width: 800px;
+    max-height: 800px;
+    margin: 10px auto;
+}
+
+.about .about_banner img{
+    width: 100%;
+    height: 100%;
+}
+
+.about .caption, em, p{
+    margin: 20px;
+}
+
+.about p{
+    font-size: 1rem;
+    line-height: 1.2em;
+}
+
+footer{
+    width: 100%;
+    padding: 2em 0;
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer div{
+    max-width: 33%;
+}
+
+
+footer h1{
+    font-weight: lighter;
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+}
+
+footer .footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer .footer a{
+    color: black;
+}
+
+footer .footer a span{
+    text-decoration: underline;
+    line-height: 1em;
+}
+
+footer .footer a span:hover{
+    color: red;
+}
+
+footer .blog_post{
+    width: 100%;
+}
+
+footer .blog_post .each_blog{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 400px;
+    border-bottom: 1px solid lightgray;
+    padding-top: 1em;
+}
+
+footer .blog_post .each_blog img{
+    width: 80px;
+    height: 80px;
+}
+
+footer .blog_post .each_blog .caption{
+    max-width: 200px;
+    margin-left: 20px;
+    padding: 0;
+    text-align: left;
+}
+
+footer .blog_post .each_blog:first-child{
+    padding-bottom: 20px;
+}
+
+footer .blog_post .each_blog::after{
+    clear: both;
+}
+
+footer .posts{
+    clear: both;
+}
+
+footer .posts .each_post{
+    float: left;
+    padding:.2em .3em;
+    background-color: #757575;
+    color: white;
+    margin: .5em .2em;
+    font-size: .8rem;
+}
+
+footer .posts .active{
+    background-color: black;
+}
+
+
+@media only screen and (max-width:600px) {
+    html{
+        font-size: 14px;
+    }
+
+    main{
+        width: 78%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    nav{
+        width: 70%
+    }
+
+    .gallery .img_gallery{
+        grid-template-columns: 1fr;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+    
+    footer >div{
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width:399px) {
+    main{
+        width: 95%;
+    }
+}
